@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classify abilities. Apply rules. Choose a model.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Noto+Serif:ital@0;1&family=Noto+Sans+KR:wght@400;500;600&family=Noto+Serif+KR:wght@400&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;   /* white-smoke */
+      --color-ink:     #2d3142;   /* jet-black */
+      --color-muted:   #4f5d75;   /* blue-slate */
+      --color-accent:  #bf4520;   /* burnt-tangerine */
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', 'Noto Serif', 'Noto Serif KR', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .frame { max-width: 1280px; min-width: 0; width: 100%; }
+    /* The SVG holds its readable width (min-width == the viewBox width, so the
+       type ramp is never silently scaled down). This wrapper lets a narrow
+       screen scroll the diagram instead of the whole page. */
+    .diagram-container { width: 100%; overflow-x: auto; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+
+    svg { width: 100%; min-width: 1280px; display: block; }
+    /* Paper has no scrollbar, so the local scroller would clip instead of
+       scroll. Let the diagram scale down to the sheet: smaller but whole
+       beats sharp but cut off. Must come after the svg rule above - a media
+       query adds no specificity, so a later plain rule would win. */
+    @media print {
+      .diagram-container { overflow-x: visible; }
+      svg { min-width: 0; }
+    }
+
+.node-name { font-family: var(--font-sans); font-size: 16px; font-weight: 600; fill: #2d3142; }
+.body-copy { font-family: var(--font-sans); font-size: 16px; font-weight: 400; fill: #2d3142; }
+.sublabel { font-family: var(--font-mono); font-size: 12px; fill: #4f5d75; }
+.title-text { font-family: var(--font-serif); font-size: 40px; font-weight: 400; fill: #2d3142; }
+.eyebrow-text { font-family: var(--font-mono); font-size: 8px; font-weight: 500; fill: #4f5d75; letter-spacing: .14em; }
+.legend-text { font-family: var(--font-mono); font-size: 11px; fill: #4f5d75; }
+
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Overview · Diagram Design</p>
+    <h1>Classify abilities. Apply rules. Choose a model.</h1>
+
+
+    <div class="diagram-container">
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="01-routing-overview-title 01-routing-overview-desc">
+<title id="01-routing-overview-title">Classify abilities. Apply rules. Choose a model.</title>
+<desc id="01-routing-overview-desc">The latest request and full supported history are classified into abilities, then adopted benchmark and operational requirements filter offerings before the cheapest next-call forecast is selected.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker><marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker><marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e5aa8"/></marker></defs>
+<rect width="1280" height="720" fill="#f5f5f5"/>
+<text x="48" y="80" class="title-text" text-anchor="start">Classify abilities. Apply rules. Choose a model.</text>
+<text x="48" y="120" class="body-copy" text-anchor="start">A classifier identifies what is needed; deterministic rules make the choice.</text>
+<path data-edge="request:classifier" data-source="request" data-target="classifier" d="M 208 232 V 296" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path data-edge="profiles:gates" data-source="profiles" data-target="gates" d="M 640 232 V 296" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path data-edge="classifier:gates" data-source="classifier" data-target="gates" d="M 368 352 H 480" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path data-edge="gates:choice" data-source="gates" data-target="choice" d="M 800 352 H 912" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+<g data-node="request" data-x="48" data-y="160" data-w="320" data-h="72">
+<rect x="48" y="160" width="320" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="160" width="320" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="208.0" y="188" class="node-name" text-anchor="middle">Latest request + history</text>
+<text x="208.0" y="212" class="sublabel" text-anchor="middle">full supported conversation</text>
+</g>
+<g data-node="profiles" data-x="480" data-y="160" data-w="320" data-h="72">
+<rect x="480" y="160" width="320" height="72" rx="6" fill="#f5f5f5"/>
+<rect x="480" y="160" width="320" height="72" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="640.0" y="188" class="node-name" text-anchor="middle">Published scores + prices</text>
+<text x="640.0" y="212" class="sublabel" text-anchor="middle">adopted mappings + thresholds</text>
+</g>
+<g data-node="classifier" data-x="48" data-y="296" data-w="320" data-h="112">
+<rect x="48" y="296" width="320" height="112" rx="6" fill="#f5f5f5"/>
+<rect x="48" y="296" width="320" height="112" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="208.0" y="340" class="node-name" text-anchor="middle">Identify required abilities</text>
+<text x="208.0" y="364" class="sublabel" text-anchor="middle">math + code + context</text>
+</g>
+<g data-node="gates" data-x="480" data-y="296" data-w="320" data-h="112">
+<rect x="480" y="296" width="320" height="112" rx="6" fill="#f5f5f5"/>
+<rect x="480" y="296" width="320" height="112" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+<text x="640.0" y="340" class="node-name" text-anchor="middle">Check every requirement</text>
+<text x="640.0" y="364" class="sublabel" text-anchor="middle">benchmark + operational gates</text>
+</g>
+<g data-node="choice" data-x="912" data-y="296" data-w="320" data-h="112">
+<rect x="912" y="296" width="320" height="112" rx="6" fill="#f5f5f5"/>
+<rect x="912" y="296" width="320" height="112" rx="6" fill="rgba(191,69,32,0.08)" stroke="#bf4520" stroke-width="1.2"/>
+<text x="1072.0" y="340" class="node-name" text-anchor="middle">Choose cheapest eligible model</text>
+<text x="1072.0" y="364" class="sublabel" text-anchor="middle">forecast for the next call</text>
+</g>
+<text x="48" y="488" class="body-copy" text-anchor="start">Repeat this decision at every new user turn.</text>
+<text x="48" y="532" class="body-copy" text-anchor="start">If none qualifies: use only a declared baseline exception, or return unavailable.</text>
+<text x="48" y="596" class="sublabel" text-anchor="start">Conceptual overview: provider plumbing, execution state and audit records are omitted.</text>
+<line x1="48" y1="652" x2="1232" y2="652" stroke="#2d3142" stroke-opacity="0.12"/>
+<text x="48" y="684" class="legend-text" text-anchor="start">White: inputs / actions</text>
+<text x="300" y="684" class="legend-text" text-anchor="start">Orange: model choice</text>
+<text x="552" y="684" class="legend-text" text-anchor="start">Quality and total savings still need conversation-level evaluation.</text>
+</svg>
+    </div>
+  </div>
+</body>
+</html>
