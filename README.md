@@ -49,3 +49,17 @@ See the [architecture proposal](docs/proposal.md) for the design, diagrams, evid
 Changes are recorded in [CHANGELOG.md](CHANGELOG.md) under **Unreleased** until a release is prepared. This repository starts its own release history; no version tag has been created.
 
 Use `MAJOR.MINOR.PATCH` for releases: major for incompatible changes, minor for compatible additions, and patch for corrections that preserve intended behavior and agreements. A release needs a reviewed dated changelog entry and an annotated tag on its exact commit. Published tags remain fixed; later corrections use a new version.
+
+## License
+
+Original project documentation, diagrams and editable sources are available under the [MIT License](LICENSE). Third-party models, benchmarks and linked materials retain their respective terms.
+
+## Disclaimer
+
+This project is provided "as is", without warranties of any kind. To the maximum
+extent permitted by law, the owner and contributors are not liable for any loss,
+damage, or other consequences arising from its use. Review the proposal, its
+supporting evidence and its suitability for your project before applying it.
+
+This is an independent project and is not affiliated with, endorsed by,
+or sponsored by OpenAI.
