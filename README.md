@@ -44,6 +44,14 @@ See the [architecture proposal](docs/proposal.md) for the design, diagrams, evid
 - [Checks](tests/README.md) and [evidence](evidence/README.md): what has been assessed and what remains unproven.
 - [Diagram sources](src/README.md) and [delivery](docs/delivery.md): editing and using the documentation.
 
+## Starter provenance
+
+[.project-structure.yaml](.project-structure.yaml) records the adopted Project
+Structure baseline and upstream source. Include this hidden file when copying
+the project. Update it when deliberately adopting a newer starter baseline,
+separately from this project's own release version. Project-specific adaptations
+remain part of this repository; the metadata records provenance only.
+
 ## Versions and releases
 
 Changes are recorded in [CHANGELOG.md](CHANGELOG.md) under **Unreleased** until a release is prepared. This repository starts its own release history; no version tag has been created.

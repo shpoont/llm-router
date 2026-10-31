@@ -15,6 +15,8 @@
   agreed direction, proposals, superseded decisions and historical observations.
 - Check the result using suitable evidence. Distinguish attempted actions,
   prepared checks, observed outcomes and unresolved uncertainty.
+- Use [.project-structure.yaml](.project-structure.yaml) for starter provenance.
+  Keep that baseline distinct from the project's own release version.
 - Record meaningful changes in [CHANGELOG.md](CHANGELOG.md) and follow
   [versioning and releases](README.md#versions-and-releases). Keep release
   versions, changelog entries and Git tags consistent.

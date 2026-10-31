@@ -24,4 +24,4 @@ The [proposal's decisions before implementation](docs/proposal.md#decisions-befo
 
 ## Connected work
 
-Follow [design](docs/design.md), [current work](docs/current-work.md) and [decisions](docs/decisions.md). This repository applies the organization and discoverability guidance from [Project Structure v1.0.0](https://github.com/shpoont/project-structure/tree/v1.0.0), adapting its records to the present documentation stage.
+Follow [design](docs/design.md), [current work](docs/current-work.md) and [decisions](docs/decisions.md). This repository applies Project Structure's organization and discoverability guidance, adapting its records to the present documentation stage. The adopted starter baseline and upstream source are recorded in [.project-structure.yaml](.project-structure.yaml).
