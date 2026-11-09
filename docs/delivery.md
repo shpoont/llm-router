@@ -6,6 +6,8 @@ Start with the [README](../README.md), then read the [architecture proposal](pro
 
 The proposal embeds three PNG diagrams so its visuals work in Markdown viewers without a Mermaid renderer. [HTML sources](../src/README.md) support editing. They load fonts from Google Fonts when opened in a browser; the PNGs already contain the rendered text.
 
+Use the optional [deliverables](../deliverables/README.md) folder for files prepared for use or handover, or link to results kept elsewhere. This documentation baseline keeps the proposal in [docs/proposal.md](proposal.md), figures in [docs/assets/diagrams/](assets/diagrams/) and editable sources in [src/](../src/README.md).
+
 ## Delivery acceptance and remaining work
 
 For the current milestone, delivery is the public repository containing the intended documentation commit. [Publication checks](../tests/README.md#documentation-publication-checks) cover inventory, fidelity, links/assets, public-content inspection and Git/visibility verification.
