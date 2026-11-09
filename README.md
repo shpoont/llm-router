@@ -43,6 +43,7 @@ See the [architecture proposal](docs/proposal.md) for the design, diagrams, evid
 - [Current work](docs/current-work.md) and [decisions](docs/decisions.md): status, reasons and next steps.
 - [Checks](tests/README.md) and [evidence](evidence/README.md): what has been assessed and what remains unproven.
 - [Diagram sources](src/README.md) and [delivery](docs/delivery.md): editing and using the documentation.
+- [Deliverables](deliverables/README.md): an optional place for files prepared for use or handover. Current results remain linked from the delivery record.
 
 ## Starter provenance
 

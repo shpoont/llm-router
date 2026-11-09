@@ -9,3 +9,5 @@ This baseline contains editable diagram HTML, not router implementation code:
 Each is a self-contained HTML document with inline SVG and CSS, apart from its Google Fonts stylesheet. Open it in a browser to inspect or edit it. The proposal uses the corresponding PNGs in [docs/assets/diagrams/](../docs/assets/diagrams/).
 
 Keep each rendered image consistent with its source and check text, connections, example values and legibility after a change. The [design](../docs/design.md) links these figures to the proposal. Add implementation sources here only when that work has been separately scoped and authorized.
+
+Use the optional [deliverables](../deliverables/README.md) folder when helpful for files prepared for use or handover. Identify deliverables, wherever they are kept, and how to use them in [delivery](../docs/delivery.md).
